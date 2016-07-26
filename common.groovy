@@ -48,7 +48,7 @@ defaults = [
     master: "${TEST_JOB_ROOT_NAME}",
     pr: "${TEST_JOB_ROOT_NAME}-pr",
     release: "${TEST_JOB_ROOT_NAME}-release",
-    reportMsg: "Test Report: ${JENKINS_URL}job/\${JOB_NAME}/\${BUILD_NUMBER}/testReport",
+    reportMsg: "Test Report: ${System.getenv('JENKINS_URL')}job/\${JOB_NAME}/\${BUILD_NUMBER}/testReport",
     // Revisit when https://github.com/deis/jenkins-jobs/issues/51 complete
     // (timeout can/should be decreased)
     timeoutMins: 30,

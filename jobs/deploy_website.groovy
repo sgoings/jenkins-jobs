@@ -1,3 +1,4 @@
+def WORKSPACE = System.getenv("WORKSPACE") ?: new File(".").getAbsolutePath()
 evaluate(new File("${WORKSPACE}/common.groovy"))
 
 name = 'deploy_website'

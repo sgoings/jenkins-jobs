@@ -1,3 +1,4 @@
+def WORKSPACE = System.getenv("WORKSPACE") ?: new File(".").getAbsolutePath()
 evaluate(new File("${WORKSPACE}/common.groovy"))
 
 name = 'jenkins-jobs-pr'
